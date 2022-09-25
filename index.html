@@ -1,14 +1,13 @@
-
-<button id="fetchdata">Treasury Balance</button>
+<button id="fetchdata">CheckBid</button>
 <div id="result"></div>
-<script type="text/javascript">
-  const url = "https://cardano-mainnet.blockfrost.io/api/v0/addr1vyhg7vys8eqxg0laa6ykxanvnxpx3yemm0kvmlpec62w73sx70jp7" 
+<script>
+  const url = "https://cardano-mainnet.blockfrost.io/api/v0/addresses/addr1v9r0g0n3jqshfdl932t0ytq3mupgt0cjut6lz9hdfvqse8sthxl7x" 
 const fetchDataBtn = document.querySelector('#fetchdata')
 const result = document.querySelector('#result')
 
 // gets data from API and sets the content of #result div
 const getData = function() {
-  result.innerText = 'What ya got?....'
+  result.innerText = 'Loading....'
   fetch(url, {
     headers: {
       project_id: 'mainnetcPkAK17AyBxUI6KtcjY7YEbXEDKyhu6X'
